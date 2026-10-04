@@ -72,8 +72,8 @@ st.markdown(
     "Update-Formel, dieselbe Trajektorie)."
 )
 st.caption(
-    "Stück 2 (Wurzel: Perceptron) der 'Neuronale Netze'-Reihe. Geplante Folgestücke "
-    "(noch nicht gebaut): CNN, RNN, LSTM, Attention/Transformer."
+    "Stück 2 (Wurzel: Perceptron) der 'Neuronale Netze'-Reihe. Folgestücke "
+    "(alle gebaut): CNN, RNN, LSTM, Attention/Transformer."
 )
 
 with st.expander("So funktioniert das MLP", expanded=True):
@@ -254,7 +254,7 @@ exakt die Perceptron-Regel aus Stück 1, keine Näherung.
 
 st.markdown("---")
 st.caption(
-    "Diese Demo ist Teil des Portfolios von [Sebastian Hanisch](https://sebastianhanisch.net) "
-    "– Operations Research und Machine Learning. Interesse an einer maßgeschneiderten Lösung "
-    "für Ihr Unternehmen? [Kontakt aufnehmen](https://sebastianhanisch.net/kontakt.html)"
+    "Diese Demo ist Teil des Portfolios von [Sebastian Hanisch](https://sebastianhanisch.net) – "
+    "Operations Research und Machine Learning ([Über mich](https://sebastianhanisch.net/ueber-mich.html)). "
+    "Mehr zur Reihe: [Neuronale Netze: vom Perceptron zum Transformer](https://sebastianhanisch.net/konzepte-neuronale-netze.html)."
 )

@@ -14,10 +14,10 @@ Perceptron-Regel aus Stück 1 zurück, keine Näherung.
 ```
 Perceptron (WURZEL)                              [gebaut]
  └─ MLP + Backpropagation                        [DIESES STÜCK]
-      ├─ CNN                                     [nicht gebaut]
-      └─ RNN                                     [nicht gebaut]
-           └─ LSTM                               [nicht gebaut]
-                └─ Attention/Transformer         [nicht gebaut]
+      ├─ CNN                                     [gebaut]
+      └─ RNN                                     [gebaut]
+           └─ LSTM                               [gebaut]
+                └─ Attention/Transformer         [gebaut]
 ```
 
 **Ergebnis in Kürze:** 0 und 1 verdeckte Einheiten scheitern **strukturell** am XOR-Muster
@@ -161,3 +161,7 @@ streamlit run app.py
   Organization in the Brain.* Psychological Review, 65(6), 386–408. (Perceptron-Criterion-Verlust)
 - Minsky, M. & Papert, S. (1969). *Perceptrons: An Introduction to Computational Geometry.*
   MIT Press. (XOR-Grenze des Vorgängers)
+
+---
+
+Diese Demo ist Teil des Portfolios von [Sebastian Hanisch](https://sebastianhanisch.net) – Operations Research und Machine Learning ([Über mich](https://sebastianhanisch.net/ueber-mich.html)). Mehr zur Reihe: [Neuronale Netze: vom Perceptron zum Transformer](https://sebastianhanisch.net/konzepte-neuronale-netze.html).
