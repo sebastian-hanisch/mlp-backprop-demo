@@ -115,12 +115,13 @@ Nachjustieren", weil genau das eine reale Falle ist.
 
 ## Tests
 
-39 Tests, `python -m pytest tests/ -v`:
+42 Tests, `python -m pytest tests/ -v`:
 - `test_scenario.py` – Reproduzierbarkeit, Trennbarkeitsgarantie, XOR-Struktur.
 - `test_mlp.py` – Forward/Backward, Gradienten-Check (h=0 und h>0), Hidden-Unit-Grenzfälle,
   Optimierer-Verbesserung über mehrere Seeds.
 - `test_handcrafted.py` – Hand-Lösung erreicht 100 % über mehrere Seeds.
 - `test_evaluation.py` – Sweep, Reduktions-Check, Optimierer-Vergleich.
+- `test_oracle_backprop.py` – unabhängige Orakel: Complex-Step-Gradient, scikit-learn-Perceptron/-Optimierer, Lehrbuch-Adam.
 - `test_presets.py`, `test_claims.py` – jede Zahl oben nachgerechnet.
 - `test_app.py` – Streamlit `AppTest`: Presets, Regler-Extremwerte, Optimierer-Wechsel, Footer.
 
