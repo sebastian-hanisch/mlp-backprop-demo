@@ -71,6 +71,19 @@ st.markdown(
     "0 verdeckten Einheiten exakt auf die Perceptron-Regel zurück (keine Näherung: dieselbe "
     "Update-Formel, dieselbe Trajektorie)."
 )
+
+# erklaerseite:einfach:start (erzeugt von tools/set_demo_explainer.py (Website-Repo) aus tools/content/explainers/mlp-backprop-erklaert.json, nicht von Hand ändern)
+with st.expander("💬 In einfachen Worten"):
+    st.markdown(
+        """
+Stellen Sie sich eine Lampe mit zwei Schaltern vor. Sie brennt, wenn die Schalter verschieden stehen. Eine einzelne gerade Trennlinie auf einem Plan kann diese Regel nicht darstellen. Ein **mehrschichtiges Netz** hilft: Seine **verdeckten Einheiten** stellen je eine Zwischenfrage, und die letzte Stufe fasst die Antworten zusammen.
+
+Gelernt wird per **Backpropagation**. Das Netz beantwortet einen Fall. Liegt es falsch, wird der Fehler Stufe für Stufe zurückgerechnet. Daraus ergibt sich, wie jeder Regler nachzustellen ist. Die Demo zeigt, wie viele Einheiten dafür nötig sind: Mit null oder einer Einheit gelang es in der Messung nie, mit zwei nur bei einem Teil der Zufallsstarts, mit mehreren fast immer. Überraschend schneidet das Lernverfahren mit Schwung bei gleicher Schrittgröße schlechter ab als das einfache.
+
+[Ausführlich und verständlich erklärt, mit Fachteil](https://sebastianhanisch.net/mlp-backprop-erklaert.html)
+        """
+    )
+# erklaerseite:einfach:end
 st.caption(
     "Stück 2 (Wurzel: Perceptron) der 'Neuronale Netze'-Reihe. Folgestücke "
     "(alle gebaut): CNN, RNN, LSTM, Attention/Transformer."
@@ -214,6 +227,25 @@ st.markdown(
 )
 
 with st.expander("📐 Mathematische Formulierung"):
+    # erklaerseite:lesehilfe:start (erzeugt von tools/set_demo_explainer.py (Website-Repo) aus tools/content/explainers/mlp-backprop-erklaert.json, nicht von Hand ändern)
+    st.markdown(
+        r"""
+**Lesehilfe.** Gegeben sind Punkte $x$ der Ebene mit Klassen $y \in \{-1,+1\}$. Gesucht sind Gewichte $W_1, b_1, w_2, b_2$ eines Netzes mit einer tanh-Schicht, sodass das Vorzeichen der Ausgabe $s$ die Klasse trifft. Der Verlust $L = \max(0, -y s)$ ist null, wenn der Punkt richtig liegt.
+
+| Symbol | Bedeutung |
+|---|---|
+| $x$, $y$ | Punkt (zwei Koordinaten) und seine Klasse, $-1$ oder $+1$ |
+| $W_1$, $b_1$ | Gewichte und Verschiebungen der verdeckten Schicht |
+| $h$ | Antworten der verdeckten Einheiten, $h = \tanh(W_1 x + b_1)$ |
+| $w_2$, $b_2$ | Gewichte und Verschiebung des linearen Ausgangs |
+| $s$ | Ausgabe des Netzes, $s = w_2 \cdot h + b_2$; Klasse $+1$ bei $s \ge 0$ |
+| $L$ | Verlust eines Punktes, $\max(0, -y s)$ |
+| $\eta$ | Lernrate: Schrittweite, mit der die Gewichte nachgestellt werden |
+
+[Schritt für Schritt erklärt, mit Herleitung und Literatur](https://sebastianhanisch.net/mlp-backprop-erklaert.html#fachleute)
+        """
+    )
+    # erklaerseite:lesehilfe:end
     st.markdown(
         r"""
 **Vorwärtsdurchlauf:** $h = \tanh(W_1 x + b_1)$, $s = w_2 \cdot h + b_2$ (bei $h=0$: $s=w\cdot x+b$).
